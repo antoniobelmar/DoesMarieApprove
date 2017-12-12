@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+
   root "homepage#index"
+  
+  resources :restaurants
 
   get 'api/restaurants'
 
@@ -7,9 +10,4 @@ Rails.application.routes.draw do
 
   get 'api/restaurants/:id/reviews', to: 'api#restaurant_reviews'
 
-  # resources :api do
-  #
-  #   get ':id', to: 'api#restaurantsid'
-  #
-  # end
 end
