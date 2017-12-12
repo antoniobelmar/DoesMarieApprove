@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'restaurants/index'
-
-  # get 'homepage/index'
   root "homepage#index"
   resources :restaurants
 

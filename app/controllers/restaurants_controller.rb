@@ -8,14 +8,8 @@ class RestaurantsController < ApplicationController
 
   end
 
-  def getnew
-
+  def create
+    
   end
-
-  def postnew
-
-  end
-
-
 
 end
