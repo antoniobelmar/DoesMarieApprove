@@ -41,6 +41,7 @@ end
 group :test do
   # Use rspec as a test framework
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :development do
