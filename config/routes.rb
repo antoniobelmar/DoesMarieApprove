@@ -1,15 +1,15 @@
 Rails.application.routes.draw do
-  get 'api/restaurants'
-
   root "homepage#index"
 
+  get 'api/restaurants'
+
   get 'api/restaurants/:id', to: 'api#restaurantsid'
+
+  get 'api/restaurants/:id/reviews', to: 'api#restaurant_reviews'
 
   # resources :api do
   #
   #   get ':id', to: 'api#restaurantsid'
   #
   # end
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

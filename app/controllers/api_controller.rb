@@ -4,7 +4,13 @@ class ApiController < ApplicationController
   end
 
   def restaurantsid
-    @restaurant = Restaurant.find(params[:id]);
+    @restaurant = Restaurant.find(params[:id])
     render :json => @restaurant
   end
+
+  def restaurant_reviews
+    @reviews = Restaurant.find(params[:id]).reviews
+    render :json => @reviews
+  end
+
 end
