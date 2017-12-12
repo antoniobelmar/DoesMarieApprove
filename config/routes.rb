@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
-  get 'dania/index'
+  get 'api/restaurants'
 
-  get 'homepage/index'
   root "homepage#index"
+
+  get 'api/restaurants/:id', to: 'api#restaurantsid'
+
+  # resources :api do
+  #
+  #   get ':id', to: 'api#restaurantsid'
+  #
+  # end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
