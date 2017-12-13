@@ -11,9 +11,5 @@ $(document).ready(function(){
   })
 
   $('#form-page').append('<form action="/api/restaurants/'+ id +'/reviews" method="post"><input type="text" name="review[rating]"><input type="text" name="review[comment]"><input type="submit" value="Add Review"></form>')
-  // $('#form-page').append('<input type="text" name="rating">')
-  // $('#form-page').append('<input type="text" name="comment">')
-  // $('#form-page').append('<input type="submit" value="Add Review">')
-  // $('#form-page').append('</form>')
 
 });
