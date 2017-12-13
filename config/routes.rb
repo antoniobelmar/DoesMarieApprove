@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root "homepage#index"
+  root "restaurants#index"
 
   namespace :api do
     resources :restaurants, only: [:index, :show, :create] do
