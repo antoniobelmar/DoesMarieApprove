@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
-
   root "homepage#index"
 
   namespace :api do
@@ -14,5 +12,6 @@ Rails.application.routes.draw do
 
   resources :restaurants, only: [:index, :show]
 
+  resources :users
 
 end
