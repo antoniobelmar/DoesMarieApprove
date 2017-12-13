@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'users/new'
-
   root "homepage#index"
 
   resources :restaurants
@@ -13,5 +11,10 @@ Rails.application.routes.draw do
   get 'api/restaurants/:id/reviews', to: 'api#restaurant_reviews'
 
   resources :users
+
+  get    '/signup',  to: 'users#new'
+  get    '/login',   to: 'sessions#new'
+  post   '/login',   to: 'sessions#create'
+  delete '/logout',  to: 'sessions#destroy'
 
 end
