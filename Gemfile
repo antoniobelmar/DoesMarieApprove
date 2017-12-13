@@ -11,6 +11,8 @@ gem 'rails', '~> 5.1.4'
 # Use pg as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
+gem 'bcrypt'
+# Use bcrypt to encrypt passwords
 gem 'puma', '~> 3.7'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
