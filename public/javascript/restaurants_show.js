@@ -10,13 +10,6 @@ $(document).ready(function(){
     $('#single-restaurant-' + id).append('<img src="' + data.restaurant.image + '">')
   });
 
-  var ratingSelectBox = `<select>
-  <option value="volvo">Volvo</option>
-  <option value="saab">Saab</option>
-  <option value="mercedes">Mercedes</option>
-  <option value="audi">Audi</option>
-  </select>`
-
   function createSelectBox() {
     var string = "";
     for (var i=1; i<=10; i++) {
