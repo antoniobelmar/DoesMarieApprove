@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :restaurants, only: [:index, :show]
+  resources :restaurants, only: [:index, :create, :show, :new]
 
   resources :users, only: [:new, :create]
 
