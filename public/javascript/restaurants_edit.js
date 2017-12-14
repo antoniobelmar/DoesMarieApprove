@@ -10,7 +10,7 @@
       var description = $("#description").val();
       var image = $("#image").val();
       $.ajax("/restaurants/" + id , { type: 'POST', data: { _method: 'PATCH', name: name, location: location, description: description, image: image, id: id } })
-      window.location.href = "http://localhost:3000/restaurants/"
+      
     });
 
 
