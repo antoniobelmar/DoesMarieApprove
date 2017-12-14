@@ -10,9 +10,24 @@ $(document).ready(function(){
     $('#single-restaurant-' + id).append('<img src="' + data.restaurant.image + '">')
   });
 
+  var ratingSelectBox = `<select>
+  <option value="volvo">Volvo</option>
+  <option value="saab">Saab</option>
+  <option value="mercedes">Mercedes</option>
+  <option value="audi">Audi</option>
+  </select>`
+
+  function createSelectBox() {
+    var string = "";
+    for (var i=1; i<=10; i++) {
+      string += `<option value="${i}">${i}</option>`
+    }
+    return '<select name="review[rating]">' + string + '</select>';
+  }
+
   $.get("/api/restaurants/" + id + "/reviews",function(data){
     $('#reviews-heading').append('<h2> Reviews </h2>')
-    $('#form-page').append('<form action="/api/restaurants/'+ id +'/reviews" method="post"><input type="text" name="review[rating]" placeholder="Rating"><input type="text" name="review[comment]" placeholder="Comment"><input type="submit" value="Add Review"></form>')
+    $('#form-page').append('<form action="/api/restaurants/'+ id +'/reviews" method="post">Rating: ' + createSelectBox() + '<input type="text" name="review[comment]" placeholder="Comment"><input type="submit" value="Add Review"></form>')
     data.reviews.forEach(function(review){
       $('#single-restaurant-reviews').append('<h5>' + review.rating + '</h5>')
       $('#single-restaurant-reviews').append('<p>' + review.comment + '</p>')
