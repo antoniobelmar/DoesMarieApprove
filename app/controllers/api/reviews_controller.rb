@@ -1,5 +1,6 @@
 module Api
   class ReviewsController < ApplicationController
+    protect_from_forgery except: :create
 
     def index
       render json: { reviews: reviews }, status:200
@@ -7,7 +8,9 @@ module Api
 
     def create
       restaurant = Restaurant.find_by(id: restaurant_id)
-      restaurant.reviews.create(review_params)
+      restaurant.reviews << current_user.reviews.new(review_params)
+      restaurant.save
+      redirect_to "/restaurants/#{restaurant_id}"
     end
 
     private
