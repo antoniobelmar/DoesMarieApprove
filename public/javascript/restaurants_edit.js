@@ -6,9 +6,11 @@
 
     $("#Submit").on("click", function(){
       var name = $("#name").val();
-      console.log(name)
-      $.post("/restaurants" , {name: name, id: id})
-     window.location.href = "http://localhost:3000/restaurants/"
+      var location = $("#location").val();
+      var description = $("#description").val();
+      var image = $("#image").val();
+      $.ajax("/restaurants/" + id , { type: 'POST', data: { _method: 'PATCH', name: name, location: location, description: description, image: image, id: id } })
+      window.location.href = "http://localhost:3000/restaurants/"
     });
 
 
