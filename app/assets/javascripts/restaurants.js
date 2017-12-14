@@ -8,7 +8,7 @@ $(document).ready(function(){
        $('#restaurants').append('<div id=restaurant-' + restaurant.id + '></div>')
        $('#restaurant-' + restaurant.id).append('<a href="/restaurants/'+ restaurant.id +'"><h1>' + restaurant.name + '</h1></a>')
        $('#restaurant-' + restaurant.id).append('<h4>' + restaurant.description + '</h4>')
-       $('#restaurant-' + restaurant.id).append('<img src=' + restaurant.image + '</img>')
+       $('#restaurant-' + restaurant.id).append('<img src=' + restaurant.image + '>')
        $('#restaurant-' + restaurant.id).append('<p>' + restaurant.location + '</p>')
     })
   });
