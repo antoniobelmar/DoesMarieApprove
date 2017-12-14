@@ -15,7 +15,8 @@ class RestaurantsController < ApplicationController
   end
 
   def show
-
+    restaurant = Restaurant.find(params[:id])
+    @restaurant_owner = User.find(restaurant.user_id)
   end
 
   def edit
@@ -32,7 +33,7 @@ class RestaurantsController < ApplicationController
   def destroy
     restaurant = Restaurant.find(params[:id])
     reviews = Review.find_by(restaurant_id: params[:id])
-    reviews.destroy
+    reviews.destroy if reviews
     restaurant.destroy
     redirect_to :restaurants
   end
