@@ -10,13 +10,13 @@
   <body>
     <div class="nav-bar">
       <% if logged_in? %>
-        <form action="/logout" method="post">
+        <form action="/sessions/<%=current_user.id%>" method="post">
           <input type="hidden" value="delete" name="_method">
           <input class="session-button" type="submit" value="Sign Out">
         </form>
       <% else %>
         <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
-        <a href="/login"><button class="session-button" type="button">Sign In</button></a>
+        <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>
       <% end %>
     </div>
     <% flash.each do |message_type, message| %>
