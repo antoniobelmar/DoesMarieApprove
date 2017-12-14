@@ -19,8 +19,12 @@ class RestaurantsController < ApplicationController
     redirect_to :restaurants
   end
 
-  def delete
-
+  def destroy
+    restaurant = Restaurant.find(params[:id])
+    reviews = Review.find_by(restaurant_id: params[:id])
+    reviews.destroy
+    restaurant.destroy
+    redirect_to :restaurants
   end
 
 end

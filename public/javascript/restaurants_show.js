@@ -22,7 +22,11 @@ $(document).ready(function(){
     window.location.href = "http://localhost:3000/restaurants/" + id + "/edit"
   })
 
-  
+  $("#Delete").on("click", function(){
+    $.ajax("/restaurants/" + id, {type: 'DELETE', data: {id: id} } )
+  })
+
+
 
   $('#form-page').append('<form action="/api/restaurants/'+ id +'/reviews" method="post"><input type="text" name="review[rating]"><input type="text" name="review[comment]"><input type="submit" value="Add Review"></form>')
 
