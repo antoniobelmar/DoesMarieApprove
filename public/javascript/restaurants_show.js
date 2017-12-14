@@ -15,9 +15,14 @@ $(document).ready(function(){
     data.reviews.forEach(function(review){
       $('#single-restaurant').append('<h5>' + review.rating + '</h5>')
       $('#single-restaurant').append('<p>' + review.comment + '</p>')
-
     });
   })
+
+  $("#Edit").on("click", function(){
+    window.location.href = "http://localhost:3000/restaurants/" + id + "/edit"
+  })
+
+  
 
   $('#form-page').append('<form action="/api/restaurants/'+ id +'/reviews" method="post"><input type="text" name="review[rating]"><input type="text" name="review[comment]"><input type="submit" value="Add Review"></form>')
 

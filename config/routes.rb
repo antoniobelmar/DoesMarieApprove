@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :restaurants, only: [:index, :show]
+  resources :restaurants, only: [:index, :edit, :create, :show]
 
   resources :users
 
@@ -18,5 +18,7 @@ Rails.application.routes.draw do
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+
+
 
 end
