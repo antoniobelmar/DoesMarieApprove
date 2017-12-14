@@ -13,6 +13,10 @@ $(document).ready(function(){
     })
   });
 
+  $("#add_restaurant").on("click",function(){
+    window.location.pathname = "/restaurants/new"
+  })
+
 
 
 
