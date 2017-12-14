@@ -1,5 +1,4 @@
-
-  console.log(window.location.pathname)
+console.log(window.location.pathname)
 
   $(document).ready(function(){
     var id = window.location.pathname.split('/')[2]
@@ -10,7 +9,7 @@
       var description = $("#description").val();
       var image = $("#image").val();
       $.ajax("/restaurants/" + id , { type: 'POST', data: { _method: 'PATCH', name: name, location: location, description: description, image: image, id: id } })
-      
+
     });
 
 
