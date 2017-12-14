@@ -12,7 +12,7 @@ $(document).ready(function(){
 
   $.get("/api/restaurants/" + id + "/reviews",function(data){
     $('#reviews-heading').append('<h2> Reviews </h2>')
-    $('#form-page').append('<form action="/api/restaurants/'+ id +'/reviews" method="post"><input type="text" name="review[rating]"><input type="text" name="review[comment]"><input type="submit" value="Add Review"></form>')
+    $('#form-page').append('<form action="/api/restaurants/'+ id +'/reviews" method="post"><input type="text" name="review[rating]" placeholder="Rating"><input type="text" name="review[comment]" placeholder="Comment"><input type="submit" value="Add Review"></form>')
     data.reviews.forEach(function(review){
       $('#single-restaurant-reviews').append('<h5>' + review.rating + '</h5>')
       $('#single-restaurant-reviews').append('<p>' + review.comment + '</p>')
