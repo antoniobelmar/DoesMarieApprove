@@ -13,7 +13,6 @@ user.restaurants.create(name:'Marie',description:'does bottomless brunches',imag
 user.restaurants.create(name:'Dania',description:'specializes in chicken rice',image:'https://media-cdn.tripadvisor.com/media/photo-o/06/45/0e/fe/fino-cocktail-bar-restaurant.jpg',location:'London')
 
 user2 = User.create(name: 'Allan', email: 'alkla@antonio123.com', password: '123456', password_confirmation: '123456')
-# review = user2.reviews.new(rating: 1, comment: 'greatest food alive')
 restaurant = Restaurant.find_by(id: 1)
 restaurant.reviews << user2.reviews.new(rating: 1, comment: 'greatest food alive')
 restaurant.reviews << user2.reviews.new(rating: 10, comment: 'sarcastic comment')
