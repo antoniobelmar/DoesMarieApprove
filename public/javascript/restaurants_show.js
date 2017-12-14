@@ -19,6 +19,12 @@ $(document).ready(function(){
     });
   })
 
+  $("#Edit").on("click", function(){
+    window.location.href = "http://localhost:3000/restaurants/" + id + "/edit"
+  })
 
+  $("#Delete").on("click", function(){
+    $.ajax("/restaurants/" + id, {type: 'DELETE', data: {id: id} } )
+  })
 
 });

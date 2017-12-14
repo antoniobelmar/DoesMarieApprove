@@ -10,10 +10,12 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :restaurants, only: [:index, :create, :show, :new]
+  resources :restaurants, only: [:index, :new, :create, :edit, :update, :show, :destroy]
 
   resources :users, only: [:new, :create]
 
   resources :sessions, only: [:new, :create, :destroy]
+
+
 
 end
