@@ -11,19 +11,10 @@ module Api
       render :json => { restaurant: restaurant }
     end
 
-    def create
-      new_restaurant = Restaurant.new(restaurant_params)
-      new_restaurant.save
-    end
-
     private
 
-    def restaurant_params
-      params.require(:restaurant).permit(:name,:description,:image,:location)
-    end
-
     def restaurant
-      @restaurant ||=Restaurant.find_by!(id: id)
+      @restaurant ||= Restaurant.find_by!(id: id)
     end
 
     def id
