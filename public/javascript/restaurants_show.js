@@ -32,7 +32,7 @@ $(document).ready(function(){
   })
 
   $("#Delete").on("click", function(){
-    $.ajax("/restaurants/" + id, {type: 'DELETE', data: {id: id} } )
+    $.ajax("/restaurants/" + id, {type: 'POST', data: {_method: 'DELETE', id: id} } )
   })
 
 });
