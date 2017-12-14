@@ -1,14 +1,16 @@
 Rails.application.routes.draw do
 
-  root "homepage#index"
+  root "restaurants#index"
 
-  resources :restaurants
+  namespace :api do
+    resources :restaurants, only: [:index, :show, :create] do
+      resources :reviews, only: [:index, :create] do
 
-  get 'api/restaurants'
+      end
+    end
+  end
 
-  get 'api/restaurants/:id', to: 'api#restaurantsid'
-
-  get 'api/restaurants/:id/reviews', to: 'api#restaurant_reviews'
+  resources :restaurants, only: [:index, :show]
 
   resources :users
 
