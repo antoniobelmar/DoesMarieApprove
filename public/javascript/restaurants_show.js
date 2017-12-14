@@ -27,4 +27,8 @@ $(document).ready(function(){
     $.ajax("/restaurants/" + id, {type: 'DELETE', data: {id: id} })
   })
 
+  $("#Back").on("click", function(){
+   window.location.pathname = "/restaurants"
+  });
+
 });
