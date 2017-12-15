@@ -10,6 +10,7 @@ $(document).ready(function(){
        $('#restaurant-' + restaurant.id).append('<h4>' + restaurant.description + '</h4>')
        $('#restaurant-' + restaurant.id).append('<img src=' + restaurant.image + '>')
        $('#restaurant-' + restaurant.id).append('<p>' + restaurant.location + '</p>')
+       $('#restaurant-' + restaurant.id).append('<p>' + restaurant.average_rating + '</p>')
     })
   });
 
