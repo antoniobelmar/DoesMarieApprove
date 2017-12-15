@@ -1,10 +1,8 @@
-# feature 'view all restaurants' do
-# scenario 'Page should display all restaurants' do
-#   visit '/restaurants/adds'
-#   fill_in('name', with: 'Allans')
-#   fill_in('description', with: 'Selling pizza')
-#   click_button('Add Restaurant')
-#   #visit '/'
-#   expect(page.text).to include('Allans','Selling pizza')
-#   end
-# end
+require 'rails_helper'
+feature 'view all restaurants' do
+  scenario 'Page should display all restaurants' do
+    sign_up_and_sign_in
+    create_restaurant
+    expect(page.text).to include('Foodnow noodle' ,'London', 'The noodles are HOT!!!!!!!!!!!!')
+  end
+end
