@@ -1,3 +1,5 @@
+require 'database_cleaner'
+require './spec/features/web_helpers'
 
 RSpec.configure do |config|
 
@@ -10,4 +12,15 @@ RSpec.configure do |config|
   end
 
   config.shared_context_metadata_behavior = :apply_to_host_groups
+
+  config.before(:each) do
+    DatabaseCleaner.clean_with(:truncation)
+    DatabaseCleaner.strategy = :transaction
+    DatabaseCleaner.start
+  end
+
+  config.append_after(:each) do
+    DatabaseCleaner.clean
+  end
+
 end
