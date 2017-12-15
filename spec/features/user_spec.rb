@@ -44,4 +44,9 @@ feature 'Validation' do
     sign_up_wrong_password
     expect(page).to have_content("Password confirmation doesn't match Password")
   end
+
+  scenario 'Not entering a password with more than 6 characters' do
+    sign_up_short_password
+    expect(page).to have_content("Password is too short")
+  end
 end

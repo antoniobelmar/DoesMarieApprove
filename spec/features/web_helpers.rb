@@ -23,3 +23,12 @@ def sign_up_wrong_password
   fill_in('user[password_confirmation]', with: 'allan1234')
   click_button('Create my account')
 end
+
+def sign_up_short_password
+  visit '/users/new'
+  fill_in('user[name]', with: 'Allan')
+  fill_in('user[email]', with: 'allan@allan.com')
+  fill_in('user[password]', with: '1234')
+  fill_in('user[password_confirmation]', with: '1234')
+  click_button('Create my account')
+end
