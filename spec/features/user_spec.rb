@@ -40,5 +40,8 @@ feature 'Validation' do
     expect(page).to have_content('Email has already been taken')
   end
 
-  scenario ''
+  scenario 'Wrong password confirmation will throw error' do
+    sign_up_wrong_password
+    expect(page).to have_content("Password confirmation doesn't match Password")
+  end
 end
