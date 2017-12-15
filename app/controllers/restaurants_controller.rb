@@ -27,7 +27,7 @@ class RestaurantsController < ApplicationController
     restaurant = Restaurant.find(params[:id])
     restaurant.update_restaurant(params[:name], params[:location], params[:description], params[:image]  )
     restaurant.save
-    redirect_to :restaurants
+    redirect_to "/restaurants/#{params[:id]}"
   end
 
   def destroy
