@@ -3,44 +3,39 @@
 <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
 <link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet'>
 
-
-
-
   <img class="image" src="https://www.scandichotels.com/imagevault/publishedmedia/qn6infvg30381stkubky/scandic-sundsvall-city-restaurant-verket-10.jpg" width="1280" height="630">
   <div class="circle"></div>
 
 
-<h1>Sign up</h1>
+<h1 id="signup-header">Sign up</h1>
 
-<!-- <div class="row"> -->
     <%= form_for(@user) do |f| %>
 
       <%= render 'shared/error_messages' %>
 
-    <div class="names">
-      <%= f.text_field :name, class: "namefield" %>
-      <%= f.label :name, class: "name" %>
-    </div>
+      <div class="names">
+        <%= f.text_field :name, class: "namefield" %>
+        <%= f.label :name, class: "name" %>
+      </div>
 
-    <div class="emails">
-      <%= f.email_field :email, class: "emailfield" %>
-      <%= f.label :email , class: "email"%>
-    </div>
+      <div class="emails">
+        <%= f.email_field :email, class: "emailfield" %>
+        <%= f.label :email , class: "email"%>
+      </div>
 
-    <div class="passwords">
-      <%= f.label :password, class: "password" %>
-      <%= f.password_field :password, class: "passfield"  %>
-    </div>
+      <div class="passwords">
+        <%= f.label :password, class: "password" %>
+        <%= f.password_field :password, class: "passfield"  %>
+      </div>
 
-    <div class="confirms">
-      <%= f.label :password_confirmation, "Confirmation", class: "confirm" %>
-      <%= f.password_field :password_confirmation, class: "confifield"  %>
-    </div>
+      <div class="confirms">
+        <%= f.label :password_confirmation, "Confirmation", class: "confirm" %>
+        <%= f.password_field :password_confirmation, class: "confifield"  %>
+      </div>
 
-    <div class="button">
-      <%= f.submit "Create my account", class: "btn" %>
-    </div>
+      <div class="button">
+        <%= f.submit "Create my account", class: "btn" %>
+      </div>
     <% end %>
 
 <!--
-</div> -->

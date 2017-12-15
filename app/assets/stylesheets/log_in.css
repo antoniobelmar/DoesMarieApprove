@@ -36,35 +36,13 @@ body{
   opacity: 1;
 }
 
-#signup-header{
+#login-header{
   font-family: Quicksand, sans-serif;
   font-weight:700;
   font-size: 6em;
   position: absolute;
   top: 27%;
-  left: 42%;
-}
-
-.names{
-  position: absolute;
   left: 43%;
-  top: 43%;
-}
-
-.name{
-  position: relative;
-  left: -110%;
-  top: 50%;
-  font-family: Quicksand, sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-}
-
-.namefield{
-  width: 250px;
-  border-radius: 100px;
-  padding: 5px;
-  outline: none;
 }
 
 .emails{
@@ -111,47 +89,24 @@ body{
   outline: none;
 }
 
-.confirms{
+.login-button{
   position: absolute;
-  left: 37%;
-  top: 66%;
-}
-
-.confirm{
-  position: relative;
-  left: -3%;
-  top: 55%;
-  font-family: Quicksand, sans-serif;
-  font-weight: 700;
-  font-size: 12px;
-
-}
-
-.confifield{
-  width: 250px;
-  border-radius: 100px;
-  padding: 5px;
-  outline: none;
-}
-
-.button{
-  position: absolute;
-  left: 45%;
+  left: 47%;
   top: 77%;
 }
 
-.btn{
+.login-btn{
   position: absolute;
   top: 10%;
   border-radius: 20px;
   padding: 10px 20px;
 }
 
-.btn:hover{
+.login-btn:hover{
   outline: none;
 }
 
-.btn:active{
+.login-btn:active{
   outline: none;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
