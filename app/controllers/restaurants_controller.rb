@@ -16,6 +16,7 @@ class RestaurantsController < ApplicationController
 
   def show
     restaurant = Restaurant.find(params[:id])
+    p restaurant 
     @restaurant_owner = User.find(restaurant.user_id)
   end
 

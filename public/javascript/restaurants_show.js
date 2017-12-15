@@ -8,6 +8,7 @@ $(document).ready(function(){
     $('#single-restaurant-' + id).append('<h3>' + data.restaurant.location + '</h3>')
     $('#single-restaurant-' + id).append('<h4>' + data.restaurant.description + '</h4>')
     $('#single-restaurant-' + id).append('<img src="' + data.restaurant.image + '">')
+
   });
 
   function createSelectBox() {
@@ -34,5 +35,7 @@ $(document).ready(function(){
   $("#Delete").on("click", function(){
     $.ajax("/restaurants/" + id, {type: 'POST', data: {_method: 'DELETE', id: id} } )
   })
+
+
 
 });
