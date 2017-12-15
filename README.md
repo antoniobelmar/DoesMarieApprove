@@ -1,5 +1,6 @@
 # DOES MARIE APPROVE?
 
+## User Stories
 ```
 As a restaurant owner,
 so that i can get feedback on my business,
@@ -15,8 +16,6 @@ I would like to see a single’s restaurant’s average rating
 
 —————————————————————————————————————
 
-MVP 1 User Stories that we discussed
-
 As a restaurant owner,
 so that i can keep my restaurant details up to date
 I want to be able to edit  my restaurant from the website.
@@ -25,8 +24,8 @@ As a restaurant owner,
 so that i can keep my restaurant details up to date
 I want to be able to delete my restaurant from the website.
 
-As a visitor,
-so I can share my experience
+As a visitor, <br />
+so I can share my experience <br />
 I want to be able to leave a rating in my review
 
 As a visitor,
@@ -49,3 +48,18 @@ As a visitor
 so I can be go out of the website
 I would like to be able to logout of the website  
 ```
+## Setup
+```
+$ git clone https://github.com/antoniobelmar/DoesMarieApprove.git
+$ bundle install
+$ bin/rails db:setup
+$ bin/rails s
+```
+
+## Functionality
+As a user you can sign up with name, email address and password. As a signed in user you can add, edit and delete restaurants. As a signed in user you can add reviews to restaurants.
+
+## To-do
+- Do unit tests
+- Use carrier-wave for image uploads
+- Add feature: edit and delete reviews
