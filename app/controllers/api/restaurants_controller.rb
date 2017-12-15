@@ -7,13 +7,14 @@ module Api
     end
 
     def show
-      render :json => { restaurant: restaurant }
+      render :json => { restaurant: restaurant}
     end
 
     private
 
     def restaurant
-      @restaurant ||= Restaurant.find_by!(id: id)
+      restaurant ||= Restaurant.find_by!(id: id)
+      { id: restaurant.id, name: restaurant.name, location: restaurant.location, description: restaurant.description, image: restaurant.image, average_rating: average_rating(restaurant) }
     end
 
     def id
