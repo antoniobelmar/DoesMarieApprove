@@ -9,6 +9,8 @@
   </head>
   <body>
     <div class="nav-bar">
+      <a href="/"><button
+         type="button">Restaurants</button></a>
       <% if logged_in? %>
         <form action="/sessions/<%=current_user.id%>" method="post">
           <input type="hidden" value="delete" name="_method">
@@ -17,6 +19,7 @@
       <% else %>
         <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
         <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>
+
       <% end %>
     </div>
     <% flash.each do |message_type, message| %>
