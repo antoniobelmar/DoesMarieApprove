@@ -15,8 +15,8 @@
           <input class="session-button" type="submit" value="Sign Out">
         </form>
       <% else %>
-        <a href="/users/new"><button class="session-button" type="button">Sign Up</button></a>
-        <a href="/sessions/new"><button class="session-button" type="button">Sign In</button></a>
+        <a href="/users/new"><button class="session-button" type="button" value="Sign up">Sign Up</button></a>
+        <a href="/sessions/new"><button class="session-button" type="button" value="Sign in">Sign In</button></a>
       <% end %>
     </div>
     <% flash.each do |message_type, message| %>
