@@ -7,4 +7,9 @@ feature 'Edit restaurant' do
     visit '/restaurants/1/'
     expect(page).to have_button('Edit')
   end
+
+  scenario 'You should be able to delete a restaurant if you are the owner' do
+    delete_restaurant
+    expect(page).to_not have_content('Foodnow noodle')
+  end
 end

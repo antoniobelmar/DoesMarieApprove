@@ -41,3 +41,10 @@ def sign_up_invalid_email
   fill_in('user[password_confirmation]', with: '123456')
   click_button('Create my account')
 end
+
+def delete_restaurant
+  sign_up_and_sign_in
+  create_restaurant
+  visit '/restaurants/1'
+  click_button('Delete')
+end
