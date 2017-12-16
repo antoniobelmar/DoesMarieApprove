@@ -1,0 +1,158 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html{
+  font-size: 10px
+}
+
+body{
+  background-color: rgb(16, 40, 73);
+  box-sizing: border-box;
+}
+
+.image{
+  opacity: 0.2;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  width: 1000;
+  height: 500;
+}
+
+.circle{
+  width: 550px;
+    height: 550px;
+    size: contain;
+    -webkit-border-radius: 75px;
+    -moz-border-radius: 75px;
+    border-radius: 500px;
+    background-color: rgb(227, 208, 110);
+  position: absolute;
+  top: 7%;
+  left: 28.5%;
+  opacity: 1;
+}
+
+#signup-header{
+  font-family: Quicksand, sans-serif;
+  font-weight:700;
+  font-size: 6em;
+  position: absolute;
+  top: 27%;
+  left: 42%;
+}
+
+.names{
+  position: absolute;
+  left: 43%;
+  top: 43%;
+}
+
+.name{
+  position: relative;
+  left: -110%;
+  top: 50%;
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.namefield{
+  width: 250px;
+  border-radius: 100px;
+  padding: 5px;
+  outline: none;
+}
+
+.emails{
+  position: absolute;
+  left: 43%;
+  top: 50%;
+}
+
+.email{
+  position: relative;
+  left: -110%;
+  top: 50%;
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.emailfield{
+  width: 250px;
+  border-radius: 100px;
+  padding: 5px;
+  outline: none;
+}
+
+.passwords{
+  position: absolute;
+  left: 38.5%;
+  top: 58%;
+}
+
+.password{
+  position: relative;
+  left: -5%;
+  top: 55%;
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.passfield{
+  width: 250px;
+  border-radius: 100px;
+  padding: 5px;
+  outline: none;
+}
+
+.confirms{
+  position: absolute;
+  left: 37%;
+  top: 66%;
+}
+
+.confirm{
+  position: relative;
+  left: -3%;
+  top: 55%;
+  font-family: Quicksand, sans-serif;
+  font-weight: 700;
+  font-size: 12px;
+
+}
+
+.confifield{
+  width: 250px;
+  border-radius: 100px;
+  padding: 5px;
+  outline: none;
+}
+
+.button{
+  position: absolute;
+  left: 45%;
+  top: 77%;
+}
+
+.btn{
+  position: absolute;
+  top: 10%;
+  border-radius: 20px;
+  padding: 10px 20px;
+}
+
+.btn:hover{
+  outline: none;
+}
+
+.btn:active{
+  outline: none;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}

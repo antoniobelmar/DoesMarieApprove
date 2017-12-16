@@ -1,23 +1,41 @@
 <% provide(:title, 'Sign up') %>
-<h1>Sign up</h1>
+<link rel="stylesheet" href="stylesheet/sign_up.css">
+<link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Quicksand:700' rel='stylesheet'>
 
-<div class="row">
-  <div class="col-md-6 col-md-offset-3">
+  <img class="image" src="https://www.scandichotels.com/imagevault/publishedmedia/qn6infvg30381stkubky/scandic-sundsvall-city-restaurant-verket-10.jpg" width="1280" height="630">
+  <div class="circle"></div>
+
+
+<h1 id="signup-header">Sign up</h1>
+
     <%= form_for(@user) do |f| %>
+
       <%= render 'shared/error_messages' %>
-      <%= f.label :name %>
-      <%= f.text_field :name %>
 
-      <%= f.label :email %>
-      <%= f.email_field :email %>
+      <div class="names">
+        <%= f.text_field :name, class: "namefield" %>
+        <%= f.label :name, class: "name" %>
+      </div>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+      <div class="emails">
+        <%= f.email_field :email, class: "emailfield" %>
+        <%= f.label :email , class: "email"%>
+      </div>
 
-      <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <div class="passwords">
+        <%= f.label :password, class: "password" %>
+        <%= f.password_field :password, class: "passfield"  %>
+      </div>
 
-      <%= f.submit "Create my account", class: "btn btn-primary" %>
+      <div class="confirms">
+        <%= f.label :password_confirmation, "Confirmation", class: "confirm" %>
+        <%= f.password_field :password_confirmation, class: "confifield"  %>
+      </div>
+
+      <div class="button">
+        <%= f.submit "Create my account", class: "btn" %>
+      </div>
     <% end %>
-  </div>
-</div>
+
+<!--
